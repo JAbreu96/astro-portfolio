@@ -7,8 +7,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   // ...
   site: "jabreu96.github.io",
-  base: "/astro-portfolio"
-  assetsInclude: ['**/*.pdf'],
+  base: "/astro-portfolio",
   publicDir: './public',
   postcss: [tailwind('./tailwind.config.js')
     // ...
