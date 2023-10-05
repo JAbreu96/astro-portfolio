@@ -120,7 +120,7 @@
   height: 100%;
   z-index: 1;
   transition: all 0.3s;
-  background-color: rgba(195, 64, 64, 0)1);
+  background-color: rgba(195, 64, 64, 0);
 }
 
 .intro-btn:hover::after {
