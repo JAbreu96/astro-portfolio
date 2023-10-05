@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.about-img {
+  background-image: url(/portrait.jpeg);
+  filter: grayscale(.5);
+  clip-path: inset(-100px 0px 0px);
+  width: 50rem;
+  height: 200rem;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transform: scale(0.5);
+  background-position-y: -400px;
+}
+
+#main {
+  filter: blur(.2px);
+  width: 100vw;
+}
+
+#main canvas {
+  transform: translateZ(-10px);
+}
+
+section {
+  z-index: 2;
+}
+
+#about {
+  height: 100vh;
+}
+
+#contact-form {
+  width: 100%;
+}
+
+#contact-form input {
+  width: 60%;
+  margin: 10px 0;
+  color: black;
+}
+
+#contact-form textarea {
+  width: 80%;
+  height: 100px;
+  color: black;
+}
+
+@media (min-width: 400px) {
+  html {
+    width: 100vw;
+  }
+
+  section {
+    width: 100vw;
+  }
+
+  #contact-form {
+    width: 80%;
+  }
+
+  #contact-form input {
+    width: 40%;
+    margin: 10px 0;
+    color: black;
+  }
+
+  #contact-form textarea {
+    width: 50%;
+    height: 100px;
+    color: black;
+  }
+}

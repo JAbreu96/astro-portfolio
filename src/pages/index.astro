@@ -1,19 +1,154 @@
 ---
+import Intro from "../components/Intro.astro";
 import NavBar from "../components/NavBar.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import ContactForm from "../components/ContactForm.tsx";
+import Socials from "../components/Socials.astro";
+import AboutMe from "../components/AboutMe.astro";
+import "../components/socialanimations.css";
+import "../components/buttonanimations.css";
+import ResumeButton from "../components/ResumeButton.astro";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body>
+  <body class="flex flex-col flex-wrap text-slate-100 bg-black w-screen">
     <header>
       <NavBar />
     </header>
-    <h1>Astro</h1>
+    <div class="absolute text-2xl flex -z-10 opacity-30 w-screen">
+      <div id="main" class="w-full"></div>
+    </div>
+    <Intro />
+    <AboutMe />
+    <Experience />
+    <Skills />
+    <ContactForm client:load />
+    <Socials />
+    <ResumeButton />
   </body>
+  <script defer>
+    // document.body.style.width = window.innerWidth + "px";
+    // var windowWidth = window.innerWidth;
+
+    var canvas = document
+        .getElementById("main")
+        .appendChild(document.createElement("canvas")),
+      context = canvas.getContext("2d", { alpha: false });
+    context.globalCompositeOperation = "lighter";
+
+    canvas.width = document.body.clientWidth;
+    canvas.height = document.body.offsetHeight;
+
+    let width = canvas.width;
+    let height = canvas.height;
+
+    draw();
+
+    var stripCount = 30,
+      stripX = new Array(),
+      stripY = new Array(),
+      dY = new Array(),
+      stripFontSize = new Array();
+
+    for (var i = 0; i < stripCount; i++) {
+      stripX[i] = Math.floor(Math.random() * window.screen.width);
+      stripY[i] = -100;
+      dY[i] = Math.floor(Math.random() * 7) + 3;
+      stripFontSize[i] = Math.floor(Math.random() * 22) + 8;
+    }
+    var elem, context, timer, zIndex;
+
+    function drawStrip(x, y, z) {
+      if (z > 8) {
+        zIndex = 1;
+        z = 1;
+      }
+
+      context.zIndex = z;
+
+      for (var k = 0; k <= 30; k++) {
+        var randChar = getChar();
+        if (context.fillText) {
+          switch (k) {
+            case 0:
+              context.fillStyle = "#cefbe4";
+              break;
+            case 1:
+              context.fillStyle = "#81ec72";
+              break;
+            case 3:
+              context.fillStyle = "#5cd646";
+              break;
+            case 7:
+              context.fillStyle = "#54d13c";
+              break;
+            case 13:
+              context.fillStyle = "#4ccc32";
+              break;
+            case 17:
+              context.fillStyle = "#43c728";
+              break;
+          }
+          context.fillText(randChar, x, y);
+        }
+        y -= stripFontSize[k];
+      }
+    }
+
+    function r(from, to) {
+      return ~~(Math.random() * (to - from + 1) + from);
+    }
+
+    function pick() {
+      return arguments[r(0, arguments.length - 1)];
+    }
+
+    function getChar() {
+      return String.fromCharCode(
+        pick(r(0x3041, 0x30ff), r(0x2000, 0x206f), r(0x0020, 0x003f))
+      );
+    }
+
+    context.shadowOffsetX = context.shadowOffsetY = 0;
+    // context.shadowBlur = 8;
+    context.shadowColor = "#94f475";
+    context.textBaseline = "top";
+    context.textAlign = "center";
+
+    function draw() {
+      // clear the canvas and set the properties
+      context.beginPath();
+      context.fillStyle = "rgba(0, 0, 0, 1)";
+      context.fillRect(0, 0, width, height);
+
+      for (var j = 0; j < stripCount; j++) {
+        context.font = stripFontSize[j] + "px MatrixCode";
+
+        if (stripY[j] > height + 400) {
+          stripX[j] = Math.floor(Math.random() * width);
+          dY[j] = Math.floor(Math.random() * 7) + 3;
+          stripY[j] = -50;
+          stripFontSize[j] = Math.floor(Math.random() * 16) + 12;
+          drawStrip(stripX[j], stripY[j], zIndex);
+        } else drawStrip(stripX[j], stripY[j], zIndex);
+
+        stripY[j] += dY[j];
+      }
+      context.fill();
+
+      requestAnimationFrame(draw);
+    }
+  </script>
 </html>

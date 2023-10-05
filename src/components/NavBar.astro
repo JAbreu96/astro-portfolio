@@ -1,9 +1,26 @@
 ---
+import "./styles.css";
 ---
-<nav>
-  <a href="/">Joelchrist Abreu</a>
-  <a href="#aboutme">About Me</a>
-  <a href="#experience">Experience</a>
-  <a href="projects">Projects</a>
-  <a href="contactme">Contact Me</a>
+
+<nav id="nav" class="flex flex-row justify-around h-24 font-mon0 w-screen">
+  <a
+    class="nav-about align-baseline sm:h-16 nav-btn px-2 pt-2 text-xs h-8"
+    href="#about">About</a
+  >
+  <a
+    class="nav-exp align-baseline sm:h-16 nav-btn px-2 pt-2 text-xs h-8"
+    href="#exp">Work</a
+  >
+  <a
+    class="nav-name text-2xl font-bold align-bottom min-h-min hidden sm:inline"
+    href="/">Joelchrist Abreu</a
+  >
+  <a
+    class="nav-project align-baseline sm:h-16 nav-btn px-2 pt-2 text-xs h-8 hidden"
+    href="#projects">Projects</a
+  >
+  <a
+    class="nav-contact align-baseline sm:h-16 nav-btn px-2 pt-2 text-xs h-8"
+    href="#contact">Contact Me</a
+  >
 </nav>

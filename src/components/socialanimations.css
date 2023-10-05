@@ -1,0 +1,138 @@
+.socials-container-box {
+  list-style: none;
+}
+
+.socials-container a {
+  padding: .4rem;
+  display: block;
+  position: relative;
+  /* width: 60px; */
+  /* height: 60px; */
+  line-height: 50px;
+  font-size: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #f1f1f1;
+  margin: 0 30px;
+  transition: .5s;
+}
+
+
+.animated-border {
+  position: absolute;
+  transition: transform .5s;
+  background: #b1b1b1;
+}
+
+.animated-border:nth-child(1),
+.animated-border:nth-child(3) {
+  width: 100%;
+  height: 3px;
+  background: #b1b1b1;
+}
+
+.animated-border:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+
+.socials-container-box a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+.animated-border:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.socials-container-box a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s;
+}
+
+.animated-border:nth-child(2),
+.animated-border:nth-child(4) {
+  width: 3px;
+  height: 100%;
+  background: #b1b1b1;
+}
+
+.animated-border:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+
+.socials-container-box a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform .5s;
+}
+
+.animated-border:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+
+.socials-container-box a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform .5s;
+}
+
+.github:hover {
+  color: #3b5998;
+}
+
+.github:hover span {
+  background: #3b5998;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.twitter:hover span {
+  background: #1da1f2;
+}
+
+.linkedin:hover {
+  color: #c32aa3;
+}
+
+.linkedin:hover span {
+  background: #c32aa3;
+}
+
+.twitch:hover {
+  color: #dd4b39;
+}
+
+.twitch:hover span {
+  background: #dd4b39;
+}
+
+.animated-border .twitter {
+  color: #1da1f2;
+}
+
+.socials-container-box a:hover:nth-child(3) {
+  color: #c32aa3;
+}
+
+.socials-container-box a:hover:nth-child(4) {
+  color: #dd4b39;
+}
+
+.social-svg {
+  width: 100%;
+
+}
