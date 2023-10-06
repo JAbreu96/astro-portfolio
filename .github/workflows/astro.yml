@@ -25,7 +25,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "." # default value when not using subfolders
+  BUILD_PATH: "./dist" # default value when not using subfolders
   # BUILD_PATH: subfolder
   PUBLIC_EMAIL_JS_PUBLIC_KEY: "0EbtDvQCcCUHk2m3h"
   PUBLIC_SERVICE_ID: "service_6kvja99"
