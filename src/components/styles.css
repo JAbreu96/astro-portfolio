@@ -66,6 +66,15 @@ section {
     width: 100vw;
   }
 
+  .about-img {
+    clip-path: inset(0px 0px 0px);
+    height: 500px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(0.8);
+    background-position-y: -400px;
+  }
+
   #contact-form {
     width: 80%;
   }

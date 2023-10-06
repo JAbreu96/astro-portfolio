@@ -5,11 +5,13 @@ import GitHubSVG from "./GitHubSVG.astro";
 import TwitchSVG from "./TwitchSVG.astro";
 ---
 
-<section id="socials" class="font-mono h-fit mt-4 sm:mt-24 fixed">
-  <ul class="socials-container flex justify-start sm:h-96 mt-10 gap-5">
-    <li class="socials-container-box w-12">
+<section id="socials" class="font-mono h-fit mt-4 sm:mt-24 sm:w-fit fixed">
+  <ul
+    class="socials-container flex justify-start sm:w-fit sm:flex-col mt-10 gap-5"
+  >
+    <li class="socials-container-box w-12 sm:w-36">
       <a
-        class="github flex items-center w-10 h-10"
+        class="github flex items-center w-10 h-10 sm:h-16 sm:w-16"
         href="https://github.com/JAbreu96"
         target="_blank"
       >
@@ -20,9 +22,9 @@ import TwitchSVG from "./TwitchSVG.astro";
         <GitHubSVG />
       </a>
     </li>
-    <li class="socials-container-box w-12">
+    <li class="socials-container-box w-12 sm:w-36">
       <a
-        class="twitter w-10 h-10"
+        class="twitter w-10 h-10 sm:h-16 sm:w-16"
         href="https://twitter.com/FullStackJC"
         target="_blank"
       >
@@ -33,9 +35,9 @@ import TwitchSVG from "./TwitchSVG.astro";
         <TwitterSVG />
       </a>
     </li>
-    <li class="socials-container-box w-12">
+    <li class="socials-container-box w-12 sm:w-36">
       <a
-        class="linkedin w-10 h-10"
+        class="linkedin w-10 h-10 sm:h-16 sm:w-16"
         href="https://www.linkedin.com/in/jc-abreu/"
         target="_blank"
       >
@@ -46,9 +48,9 @@ import TwitchSVG from "./TwitchSVG.astro";
         <LinkedInSVG />
       </a>
     </li>
-    <li class="socials-container-box w-12">
+    <li class="socials-container-box w-12 sm:36">
       <a
-        class="twitch w-10 h-10"
+        class="twitch w-10 h-10 sm:h-16 sm:w-16"
         href="https://www.twitch.tv/jccodes"
         target="_blank"
       >
