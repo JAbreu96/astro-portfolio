@@ -25,11 +25,11 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "./dist" # default value when not using subfolders
+  BUILD_PATH: "." # default value when not using subfolders
   # BUILD_PATH: subfolder
-  PUBLIC_EMAIL_JS_PUBLIC_KEY: "0EbtDvQCcCUHk2m3h"
-  PUBLIC_SERVICE_ID: "service_6kvja99"
-  PUBLIC_TEMPLATE_ID: "template_rp9jhft"
+  PUBLIC_EMAIL_JS_PUBLIC_KEY: ${{secrets.PUBLIC_EMAIL_JS_PUBLIC_KEY}}
+  PUBLIC_SERVICE_ID: ${{secrets.PUBLIC_SERVICE_ID}}
+  PUBLIC_TEMPLATE_ID: ${{secrets.PUBLIC_TEMPLATE_ID}}
 jobs:
   build:
     name: Build
