@@ -21,7 +21,7 @@ import ResumeButton from "../components/ResumeButton.astro";
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>&#123;&#125; JOELCHRIST ABREU</title>
   </head>
   <body class="flex flex-col text-slate-100 bg-black w-screen h-fit pb-16">
     <header class="w-screen">
@@ -39,9 +39,6 @@ import ResumeButton from "../components/ResumeButton.astro";
     <ResumeButton />
   </body>
   <script defer>
-    // document.body.style.width = window.innerWidth + "px";
-    // var windowWidth = window.innerWidth;
-
     var canvas = document
         .getElementById("main")
         .appendChild(document.createElement("canvas")),
@@ -80,8 +77,6 @@ import ResumeButton from "../components/ResumeButton.astro";
         zIndex = 1;
         z = 1;
       }
-
-      context.zIndex = z;
 
       for (var k = 0; k <= 30; k++) {
         var randChar = getChar();
