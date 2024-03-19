@@ -80,13 +80,13 @@ section {
   }
 
   #contact-form input {
-    width: 40%;
+    width: 60%;
     margin: 10px 0;
     color: black;
   }
 
   #contact-form textarea {
-    width: 50%;
+    width: 80%;
     height: 100px;
     color: black;
   }
