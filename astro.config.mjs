@@ -6,8 +6,8 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   // ...s
-  // site: "jabreu96.github.io",
-  // base: "/astro-portfolio",
+  site: "jabreu96.github.io",
+  base: "/astro-portfolio",
   publicDir: './public',
   postcss: [tailwind('./tailwind.config.js')
     // ...
