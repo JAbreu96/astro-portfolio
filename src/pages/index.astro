@@ -53,7 +53,7 @@ import ResumeButton from "../components/ResumeButton.astro";
 
     draw();
 
-    var stripCount = 30,
+    var stripCount = 40,
       stripX = new Array(),
       stripY = new Array(),
       dY = new Array(),
@@ -101,6 +101,7 @@ import ResumeButton from "../components/ResumeButton.astro";
               context.fillStyle = "#43c728";
               break;
           }
+
           context.fillText(randChar, x, y);
         }
         y -= stripFontSize[k];
@@ -122,7 +123,6 @@ import ResumeButton from "../components/ResumeButton.astro";
     }
 
     context.shadowOffsetX = context.shadowOffsetY = 0;
-    // context.shadowBlur = 8;
     context.shadowColor = "#94f475";
     context.textBaseline = "top";
     context.textAlign = "center";
@@ -140,7 +140,7 @@ import ResumeButton from "../components/ResumeButton.astro";
           stripX[j] = Math.floor(Math.random() * width);
           dY[j] = Math.floor(Math.random() * 7) + 3;
           stripY[j] = -50;
-          stripFontSize[j] = Math.floor(Math.random() * 16) + 12;
+          stripFontSize[j] = Math.floor(Math.random() * 16) + 2;
           drawStrip(stripX[j], stripY[j], zIndex);
         } else drawStrip(stripX[j], stripY[j], zIndex);
 
@@ -148,6 +148,7 @@ import ResumeButton from "../components/ResumeButton.astro";
       }
       context.fill();
 
+      // setInterval(() => requestAnimationFrame(draw), 5);
       requestAnimationFrame(draw);
     }
   </script>
