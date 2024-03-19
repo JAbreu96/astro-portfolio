@@ -5,7 +5,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  // ...
+  // ...s
   site: "jabreu96.github.io",
   base: "/astro-portfolio",
   publicDir: './public',

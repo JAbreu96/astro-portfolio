@@ -33,17 +33,21 @@
   top: calc(100% - 3px);
 }
 
-.nav-btn {
+a.nav-btn {
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: .2rem;
   text-decoration: none;
   overflow: hidden;
-  display: inline-block;
+  display: flex;
   color: #FFF;
   background: none;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 2px solid #FFF;
   cursor: pointer;
   transform: translate3d(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 
   &:after {
     content: "";
